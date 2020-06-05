@@ -1,0 +1,58 @@
+.color-white {
+  color: white;
+}
+
+.color-blue--dark {
+  color: $blue-primary;
+}
+
+.color-blue--light{
+  color: $blue-secondary;
+}
+
+.color-green--dark {
+  color: $green-primary;
+}
+
+.color-green--light {
+  color: $green-secondary;
+}
+
+.color-gray {
+  color: $gray-dark;
+}
+
+.fs-title {
+  font-size: $fs-title;
+}
+
+.subtitle {
+  @extend .keyword;
+  font-size: $fs-subtitle;
+}
+
+.inline-wrapper {
+  display: flex;
+  align-items: baseline;
+
+  :first-child {
+    margin-right: 10px;
+  }
+}
+
+.text {
+  font-size: $fs-text;
+}
+
+.keyword {
+  font-family: $BMHanna;
+  font-weight: normal;
+}
+.link {
+  width: auto;
+
+  text-decoration: none;
+
+  color: $blue-secondary;
+  font-style: italic;
+}

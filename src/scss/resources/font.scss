@@ -1,0 +1,35 @@
+//DECLARATION
+@font-face {
+  font-family: Share;
+  src: url("../../static/fonts/Share-Regular.woff") format('woff');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Share;
+  src: url("../../static/fonts/Share-Bold.woff") format('woff');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Share;
+  src: url("../../static/fonts/Share-Italic.woff") format('woff');
+  font-style: italic;
+
+}
+
+@font-face {
+  font-family: Share;
+  src: url("../../static/fonts/Share-BoldItalic.woff") format('woff');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: BM Hanna;
+  src: url("../../static/fonts/BM-HANNA.woff") format('woff');
+}
+
+// vars
+$share: 'Share', sans-serif;
+$BMHanna: 'BM Hanna', sans-serif;
