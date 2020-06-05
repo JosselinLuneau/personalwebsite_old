@@ -12,19 +12,19 @@
 <body>
 <header id="header">
     <article id="personal">
-        <div class="inline-wrapper">
+        <div id="personal-name" class="inline-wrapper">
             <span class="keyword color-blue--light">Name</span>
             <h1 class="fs-title color-white">Josselin LUNEAU</h1>
         </div>
-        <div class="inline-wrapper">
+        <div class="inline-wrapper wide">
             <span class="keyword color-white">Who</span>
             <h2 class="fs-title color-green--light">Junior Developer</h2>
         </div>
-        <div class="inline-wrapper">
+        <div class="inline-wrapper wide">
             <span class="keyword color-white">BirthDate</span>
             <p class="fs-title color-green--light">12 mai 1999</p>
         </div>
-        <div class="inline-wrapper">
+        <div class="inline-wrapper wide">
             <span class="keyword color-white">From</span>
             <p class="color-green--light">France</p>
         </div>
@@ -40,7 +40,26 @@
         <a href="https://github.com/JosselinLuneau" target="_blank" class="social-media github"></a>
         <a href="https://gitlab.com/luneaujo" target="_blank" class="social-media gitlab"></a>
     </article>
+
+    <div id="header-bottom">
+        <div class="personal-mobile--wrapper">
+            <div class="inline-wrapper mobile">
+                <span class="keyword color-gray">Who</span>
+                <h2 class="fs-title color-green--dark">Junior Developer</h2>
+            </div>
+            <div class="inline-wrapper mobile">
+                <span class="keyword color-green--dark">BirthDate</span>
+                <p class="fs-title color-blue--dark">12 mai 1999</p>
+            </div>
+            <div class="inline-wrapper mobile">
+                <span class="keyword color-green--dark">From</span>
+                <p class="fs-title color-blue--dark">France</p>
+            </div>
+        </div>
+    </div>
 </header>
+
+
 
 <div class="mobile-wrapper">
     <article id="contact-block" data-aos="fade-left">
@@ -235,12 +254,6 @@
         <h3 class="subtitle color-blue--dark">
             Portfolio
         </h3>
-        <div id="github-link">
-            <img src="dist/images/logo/github.png" alt="Github">
-            <a class="link" target="_blank" href="https://github.com/JosselinLuneau">
-                https://github.com/JosselinLuneau
-            </a>
-        </div>
 
         <div class="projects">
             <div class="project" data-aos="fade-up">
@@ -264,7 +277,12 @@
                 <p class="project-name">Personal website</p>
             </div>
         </div>
-
+        <div id="github-link">
+            <img src="dist/images/logo/github.png" alt="Github">
+            <a class="link" target="_blank" href="https://github.com/JosselinLuneau">
+                https://github.com/JosselinLuneau
+            </a>
+        </div>
     </section>
 
     <section id="timelines">

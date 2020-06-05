@@ -8,7 +8,60 @@
   }
 
   header {
-    margin-bottom: 300px;
+    margin-bottom: 200px;
+    @media screen and (max-width: 750px) {
+      margin-bottom: 400px;
+      #personal-name {
+        justify-content: center;
+      }
+
+      .inline-wrapper.wide {
+        visibility: hidden;
+      }
+
+      .inline-wrapper.mobile {
+        display: flex!important;
+        flex-direction: row;
+      }
+
+      #myself {
+        left: 50%;
+        transform: translateX(-50%) rotateZ(45deg);
+
+        .social-media {
+          $animation-offset: 1%;
+          width: 60px !important;
+          height: 60px !important;
+
+          &.github {
+            top: initial;
+            bottom: -30%!important;
+            left: 10%!important;
+          }
+
+          &.gitlab {
+            top: initial;
+            bottom: -30%!important;
+            left: 60%!important;
+          }
+
+          &.linkedin {
+            top: initial;
+            left:initial;
+            bottom: 10%!important;
+            right: -30%!important;
+          }
+
+          &.dribble {
+            top: initial;
+            left: initial;
+            bottom: 60%!important;
+            right: -30%!important;
+          }
+        }
+      }
+    }
+
   }
 
   .mobile-wrapper {
@@ -53,33 +106,32 @@
 
   #contact-block {
     width: 80% !important;
-    height: 60px!important;
+    height: 60px !important;
 
     .contact > img {
-      width: 14px!important;
-      height: 14px!important;
+      width: 14px !important;
+      height: 14px !important;
 
-      margin-right: 10px!important;
+      margin-right: 10px !important;
     }
   }
 
-
   .progress {
-    width: 100%!important;
+    width: 100% !important;
 
     .progress_background {
-      width: 90%!important;
+      width: 90% !important;
     }
   }
 
   #languages {
-    margin-top: 20px!important;
+    margin-top: 20px !important;
   }
-
 
   .section-container {
-    padding: 0!important;
+    padding: 0 !important;
   }
+
   #skills {
     > div {
       display: flex;
@@ -88,15 +140,15 @@
     }
 
     .skill-domain {
-      width: 100%!important;
+      width: 100% !important;
     }
 
     .keyword {
-      width: 100px!important;
+      width: 100px !important;
     }
 
     .skill {
-      height: auto!important;
+      height: auto !important;
 
       display: flex;
       flex-direction: column;
@@ -106,5 +158,19 @@
       }
 
     }
+  }
+
+  #portfolio {
+    #github-link {
+      justify-content: flex-start !important;
+      margin: {
+        top: 10px;
+        left: -20px;
+      }
+    }
+  }
+
+  #copyright {
+    font-size: $fs-hint!important;
   }
 }
