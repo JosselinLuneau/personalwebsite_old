@@ -12,9 +12,6 @@
 /node_modules
 .package.swp
 
-# builder
-gulpfile.js
-
 # linters
 .eslintcache/
 .eslintrc
