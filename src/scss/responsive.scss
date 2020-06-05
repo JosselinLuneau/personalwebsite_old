@@ -1,0 +1,110 @@
+@import "resources/colors";
+@import "resources/vars";
+@import "resources/font";
+
+@media only screen and (max-width: 1400px) {
+  * {
+    font-size: $fs-hint;
+  }
+
+  header {
+    margin-bottom: 300px;
+  }
+
+  .mobile-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #profil {
+    position: relative;
+    margin-top: 50px;
+
+    width: 90% !important;
+    min-width: auto !important;
+    height: auto !important;
+
+    box-shadow: none !important;
+
+    > #profil-container {
+      height: 100% !important;
+
+      padding: 20px !important;
+    }
+
+    &:after {
+      content: "";
+
+      position: absolute;
+      left: 50%;
+      top: 48%;
+      transform: translate(-50%, -50%);
+      z-index: -2;
+
+      background-color: $gray-dark;
+      border-radius: $border-radius-default;
+
+      width: 6px;
+      height: 100%;
+    }
+  }
+
+  #contact-block {
+    width: 80% !important;
+    height: 60px!important;
+
+    .contact > img {
+      width: 14px!important;
+      height: 14px!important;
+
+      margin-right: 10px!important;
+    }
+  }
+
+
+  .progress {
+    width: 100%!important;
+
+    .progress_background {
+      width: 90%!important;
+    }
+  }
+
+  #languages {
+    margin-top: 20px!important;
+  }
+
+
+  .section-container {
+    padding: 0!important;
+  }
+  #skills {
+    > div {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+
+    .skill-domain {
+      width: 100%!important;
+    }
+
+    .keyword {
+      width: 100px!important;
+    }
+
+    .skill {
+      height: auto!important;
+
+      display: flex;
+      flex-direction: column;
+
+      .progress {
+        margin-bottom: 25px;
+      }
+
+    }
+  }
+}

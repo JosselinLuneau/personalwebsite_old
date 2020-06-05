@@ -14,10 +14,10 @@
   font-size: $fs-default;
 }
 
-html {
+
+html, body {
   overflow-x: hidden;
 }
-
 
 header {
   position: relative;
@@ -25,6 +25,10 @@ header {
   height: 100%;
 
   padding: 30px 10px 10px 20px;
+
+  @media only screen and (max-width: 1000px) {
+    margin-bottom: 200px;
+  }
 
   #personal {
     .inline-wrapper {
@@ -153,10 +157,13 @@ header {
 }
 
 #profil {
-  position: absolute;
-  left: 25%;
-  top: 40px;
+
   z-index: 1;
+  @media screen and (min-width: 1400px){
+    position: absolute;
+    left: 25%;
+    top: 40px;
+  }
 
   width: 40%;
   min-width: 550px;
@@ -188,7 +195,7 @@ header {
   }
 
   > #profil-bottom {
-    z-index: -2;
+    z-index: -1;
 
     position: relative;
     left: 50%;
@@ -206,16 +213,20 @@ header {
 }
 
 #contact-block {
-  $contact-block-offset: 30px;
-  float: right;
-
   width: 500px;
   height: 80px;
 
-  margin: {
-    top: 200px;
-    right: -($contact-block-offset - 10px);
+
+  $contact-block-offset: 30px;
+  @media screen and (min-width: 1400px){
+    float: right;
+
+    margin: {
+      top: 200px;
+      right: -($contact-block-offset - 10px);
+    }
   }
+
 
   padding: 10px $contact-block-offset 10px 10px;
 
@@ -307,6 +318,7 @@ $section-container-padding: 15px;
   > div  {
     display: grid;
     grid-template-columns: auto 50%;
+    grid-gap: 30px;
   }
 
   .skill {
@@ -467,8 +479,13 @@ $section-container-padding: 15px;
 
 // EDUCATION AND EXPERIENCES
 #timelines {
-   display: grid;
-   grid-template-columns: auto 50%;
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (min-width: 1400px){
+    display: grid;
+    grid-template-columns: auto 50%;
+  }
 }
 
 $width-time-range: 120px;
@@ -646,6 +663,7 @@ $width-time-range: 120px;
     margin-top: 30px;
 
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -755,7 +773,7 @@ footer {
 
   #footer-bg {
     position: relative;
-    left: -250px;
+    left: -15%;
 
     height: 100px;
     width: 120%;
@@ -764,3 +782,4 @@ footer {
   }
 }
 
+@import "responsive";
