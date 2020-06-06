@@ -12,4 +12,11 @@ const DOMManager = {
         parent.appendChild(o)
         return o
     },
+    getElementFromSelector(elementSelector) {
+        if (typeof elementSelector === "string") {
+            return document.querySelector(elementSelector);
+        }
+
+        return elementSelector;
+    },
 }
