@@ -8,6 +8,8 @@ const imagemin    = require('gulp-imagemin')
 const browsersync = require('browser-sync').create()
 const del         = require('del')
 const sourcemaps  = require('gulp-sourcemaps')
+const babel = require('gulp-babel');
+
 
 // PATH
 const paths = {
@@ -44,6 +46,10 @@ const styles = () =>
 const scripts = () =>
     gulp.src(paths.js.src)
         .pipe(sourcemaps.init())
+        .pipe(babel({
+            presets: ['@babel/preset-env'],
+            plugins: ['@babel/plugin-proposal-class-properties']
+        }))
         .pipe(uglify())
         .pipe(concat('scripts.js'))
         .pipe(rename({ suffix: ".min" }))
