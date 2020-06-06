@@ -18,8 +18,8 @@ const paths = {
         dest: './dist/js',
     },
     css: {
-        src: ['./src/scss/**/*.scss'],
-        // src: ['./src/scss/styles.scss'],
+        // src: ['./src/scss/**/*.scss'],
+        src: ['./src/scss/styles.scss'],
         dest: './dist/css'
     },
     images: {
