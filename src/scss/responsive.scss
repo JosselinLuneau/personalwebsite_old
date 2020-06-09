@@ -20,7 +20,7 @@
       }
 
       .inline-wrapper.mobile {
-        display: flex!important;
+        display: flex !important;
         flex-direction: row;
       }
 
@@ -37,28 +37,28 @@
 
           &.github {
             top: initial;
-            bottom: -30%!important;
-            left: 10%!important;
+            bottom: -30% !important;
+            left: 10% !important;
           }
 
           &.gitlab {
             top: initial;
-            bottom: -30%!important;
-            left: 60%!important;
+            bottom: -30% !important;
+            left: 60% !important;
           }
 
           &.linkedin {
             top: initial;
-            left:initial;
-            bottom: 10%!important;
-            right: -32%!important;
+            left: initial;
+            bottom: 10% !important;
+            right: -32% !important;
           }
 
           &.dribble {
             top: initial;
             left: initial;
-            bottom: 60%!important;
-            right: -32%!important;
+            bottom: 60% !important;
+            right: -32% !important;
           }
         }
       }
@@ -169,6 +169,18 @@
         top: 10px;
         left: -20px;
       }
+    }
+  }
+
+  @media only screen and (max-width: 700px) {
+    #resume {
+      position: relative;
+      top: -50px;
+      left: 50%;
+
+      z-index: 3;
+
+      transform: translateX(-50%);
     }
   }
 

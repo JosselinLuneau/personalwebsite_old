@@ -785,6 +785,87 @@ $width-time-range: 120px;
 footer {
   position: relative;
 
+  #resume {
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+    width: 350px;
+    height: 80px;
+
+    > a {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 3;
+
+      width: 100%;
+      height: 100%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      font-family: $BMHanna;
+      font-size: $fs-title;
+
+      color: white;
+    }
+
+    cursor: pointer;
+
+    &:after, &:before {
+      content: "";
+      z-index: 1;
+      position: absolute;
+      top:50%;
+      left:50%;
+
+      width: 100%;
+      height: 100%;
+
+      border-radius: $border-radius-default;
+      box-shadow: $box-shadow;
+
+      transition: all .2s ease;
+    }
+
+    &:before {
+      transform: translate(-50%, -50%);
+
+      background-color: $gray-dark;
+
+    }
+
+    &:after {
+      transform: translate(-50%, -50%) scale(0.7);
+
+      opacity: 0;
+
+      background-color: white;
+      border: 3px solid $green-primary;
+      border-radius: $border-radius-default;
+    }
+
+    &:hover {
+      > a {
+        z-index: 3;
+        color: $gray-dark;
+      }
+
+      &:before {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8);
+      }
+
+      &:after {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
+  }
+
   #copyright {
     position: absolute;
     left: 20px;
@@ -792,33 +873,6 @@ footer {
 
     font-size: 28px;
     color: white;
-  }
-
-  #back-top {
-    position: absolute;
-    right: 10px;
-    bottom: 20px;
-
-    width: 50px;
-    height: 50px;
-
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: $border-radius-default;
-    box-shadow: $box-shadow;
-
-    cursor: pointer;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    > img {
-      height: 80%;
-      width: 80%;
-
-      transform: rotate(-90deg);
-    }
-
   }
 
   #footer-bg {
